@@ -1,0 +1,1193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Lasteaiad" EntityType="Model1.Store.Lasteaiad" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ruhmatuubid" EntityType="Model1.Store.Ruhmatuubid" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ametikohad" EntityType="Model1.Store.Ametikohad" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ruhmad" EntityType="Model1.Store.Ruhmad" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Soimeruhmad" EntityType="Model1.Store.Soimeruhmad" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Lapsed" EntityType="Model1.Store.Lapsed" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Lapse_Puudumised" EntityType="Model1.Store.Lapse_Puudumised" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Lasteaia_Jarjekord" EntityType="Model1.Store.Lasteaia_Jarjekord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ruhma_Koosseis" EntityType="Model1.Store.Ruhma_Koosseis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Kasvatajad" EntityType="Model1.Store.Kasvatajad" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Kasvataja_Too_Ajalugu" EntityType="Model1.Store.Kasvataja_Too_Ajalugu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Lapse_Ruhma_Ajalugu" EntityType="Model1.Store.Lapse_Ruhma_Ajalugu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Kook" EntityType="Model1.Store.Kook" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Koogi_Menuu" EntityType="Model1.Store.Koogi_Menuu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Toit" EntityType="Model1.Store.Toit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Toidu_Valjaandmine" EntityType="Model1.Store.Toidu_Valjaandmine" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ruhmSet" EntityType="Model1.Store.ruhmSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="amrtikohtSet" EntityType="Model1.Store.amrtikohtSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tootajaSet" EntityType="Model1.Store.tootajaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tootamineSet" EntityType="Model1.Store.tootamineSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lapsSet" EntityType="Model1.Store.lapsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="jarjekordaSet" EntityType="Model1.Store.jarjekordaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="laps_ruhmSet" EntityType="Model1.Store.laps_ruhmSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="puudumineSet" EntityType="Model1.Store.puudumineSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="roogSet" EntityType="Model1.Store.roogSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="menuuSet" EntityType="Model1.Store.menuuSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="toidu_jagamineSet" EntityType="Model1.Store.toidu_jagamineSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="menuutoidu_jagamine" Association="Model1.Store.menuutoidu_jagamine">
+      <End Role="menuu" EntitySet="menuuSet" />
+      <End Role="toidu_jagamine" EntitySet="toidu_jagamineSet" />
+    </AssociationSet>
+    <AssociationSet Name="ruhmtootamine" Association="Model1.Store.ruhmtootamine">
+      <End Role="ruhm" EntitySet="ruhmSet" />
+      <End Role="tootamine" EntitySet="tootamineSet" />
+    </AssociationSet>
+    <AssociationSet Name="amrtikohttootamine" Association="Model1.Store.amrtikohttootamine">
+      <End Role="amrtikoht" EntitySet="amrtikohtSet" />
+      <End Role="tootamine" EntitySet="tootamineSet" />
+    </AssociationSet>
+    <AssociationSet Name="tootajatootamine" Association="Model1.Store.tootajatootamine">
+      <End Role="tootaja" EntitySet="tootajaSet" />
+      <End Role="tootamine" EntitySet="tootamineSet" />
+    </AssociationSet>
+    <AssociationSet Name="lapsjarjekorda" Association="Model1.Store.lapsjarjekorda">
+      <End Role="laps" EntitySet="lapsSet" />
+      <End Role="jarjekorda" EntitySet="jarjekordaSet" />
+    </AssociationSet>
+    <AssociationSet Name="ruhmjarjekorda" Association="Model1.Store.ruhmjarjekorda">
+      <End Role="ruhm" EntitySet="ruhmSet" />
+      <End Role="jarjekorda" EntitySet="jarjekordaSet" />
+    </AssociationSet>
+    <AssociationSet Name="lapslaps_ruhm" Association="Model1.Store.lapslaps_ruhm">
+      <End Role="laps" EntitySet="lapsSet" />
+      <End Role="laps_ruhm" EntitySet="laps_ruhmSet" />
+    </AssociationSet>
+    <AssociationSet Name="ruhmlaps_ruhm" Association="Model1.Store.ruhmlaps_ruhm">
+      <End Role="ruhm" EntitySet="ruhmSet" />
+      <End Role="laps_ruhm" EntitySet="laps_ruhmSet" />
+    </AssociationSet>
+    <AssociationSet Name="lapspuudumine" Association="Model1.Store.lapspuudumine">
+      <End Role="laps" EntitySet="lapsSet" />
+      <End Role="puudumine" EntitySet="puudumineSet" />
+    </AssociationSet>
+    <AssociationSet Name="roogmenuu" Association="Model1.Store.roogmenuu">
+      <End Role="roog" EntitySet="roogSet" />
+      <End Role="menuu" EntitySet="menuuSet" />
+    </AssociationSet>
+    <AssociationSet Name="ruhmtoidu_jagamine" Association="Model1.Store.ruhmtoidu_jagamine">
+      <End Role="ruhm" EntitySet="ruhmSet" />
+      <End Role="toidu_jagamine" EntitySet="toidu_jagamineSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Lasteaiad">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nimi" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Aadress" Type="nvarchar" Nullable="true" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Ruhmatuubid">
+    <Key>
+      <PropertyRef Name="tyma_id" />
+    </Key>
+    <Property Name="tyma_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nimi" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Preschool" Type="nvarchar" Nullable="true" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Ametikohad">
+    <Key>
+      <PropertyRef Name="job_id" />
+    </Key>
+    <Property Name="job_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nimi" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Is_Kook" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Ruhmad">
+    <Key>
+      <PropertyRef Name="group_id" />
+    </Key>
+    <Property Name="group_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ruhmatuubi_FK" Type="int" Nullable="true" />
+    <Property Name="Nimi" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Aadress" Type="nvarchar" Nullable="true" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Soimeruhmad">
+    <Key>
+      <PropertyRef Name="group_id" />
+    </Key>
+    <Property Name="group_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Soime_id" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Nimi" Type="nvarchar" Nullable="true" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Lapsed">
+    <Key>
+      <PropertyRef Name="child_id" />
+    </Key>
+    <Property Name="child_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Eesnimi" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Perenimi" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Synnipaev" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Lapse_Puudumised">
+    <Key>
+      <PropertyRef Name="absence_id" />
+    </Key>
+    <Property Name="absence_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lapse_FK" Type="int" Nullable="false" />
+    <Property Name="Kuupaev" Type="datetime" Nullable="false" />
+    <Property Name="Pohjus" Type="nvarchar" Nullable="true" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Lasteaia_Jarjekord">
+    <Key>
+      <PropertyRef Name="queue_id" />
+    </Key>
+    <Property Name="queue_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lapse_FK" Type="int" Nullable="false" />
+    <Property Name="Ruhma_Vihje_FK" Type="int" Nullable="true" />
+    <Property Name="Taotluse_kuupaev" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Ruhma_Koosseis">
+    <Key>
+      <PropertyRef Name="group_staff_id" />
+    </Key>
+    <Property Name="group_staff_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ruhma_FK" Type="int" Nullable="false" />
+    <Property Name="Kasvataja_FK" Type="int" Nullable="true" />
+    <Property Name="Ametikoha_FK" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Kasvatajad">
+    <Key>
+      <PropertyRef Name="educator_id" />
+    </Key>
+    <Property Name="educator_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Eesnimi" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Perenimi" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Kasvataja_Too_Ajalugu">
+    <Key>
+      <PropertyRef Name="history_id" />
+    </Key>
+    <Property Name="history_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kasvataja_FK" Type="int" Nullable="false" />
+    <Property Name="Ruhma_FK" Type="int" Nullable="true" />
+    <Property Name="Ametikoha_FK" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Lapse_Ruhma_Ajalugu">
+    <Key>
+      <PropertyRef Name="child_group_id" />
+    </Key>
+    <Property Name="child_group_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lapse_FK" Type="int" Nullable="false" />
+    <Property Name="Ruhma_FK" Type="int" Nullable="false" />
+    <Property Name="Start_Date" Type="datetime" Nullable="false" />
+    <Property Name="End_Date" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Kook">
+    <Key>
+      <PropertyRef Name="kitchen_id" />
+    </Key>
+    <Property Name="kitchen_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nimi" Type="nvarchar" Nullable="false" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Koogi_Menuu">
+    <Key>
+      <PropertyRef Name="menu_id" />
+    </Key>
+    <Property Name="menu_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Koogi_FK" Type="int" Nullable="false" />
+    <Property Name="Kuupaev" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Toit">
+    <Key>
+      <PropertyRef Name="dish_id" />
+    </Key>
+    <Property Name="dish_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nimi" Type="nvarchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Toidu_Valjaandmine">
+    <Key>
+      <PropertyRef Name="food_serving_id" />
+    </Key>
+    <Property Name="food_serving_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Toidu_FK" Type="int" Nullable="false" />
+    <Property Name="Ruhma_FK" Type="int" Nullable="true" />
+    <Property Name="Portsjonid" Type="int" Nullable="true" />
+    <Property Name="Kuupaev" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ruhmSet">
+    <Key>
+      <PropertyRef Name="ruhmID" />
+    </Key>
+    <Property Name="ruhmID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nimi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tuup" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="amrtikohtSet">
+    <Key>
+      <PropertyRef Name="ametID" />
+    </Key>
+    <Property Name="ametID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nimetus" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tootajaSet">
+    <Key>
+      <PropertyRef Name="tootajaID" />
+    </Key>
+    <Property Name="tootajaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="eesnimi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="perenimi" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tootamineSet">
+    <Key>
+      <PropertyRef Name="tootamineID" />
+    </Key>
+    <Property Name="tootamineID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="algus" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lopp" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ruhm_ruhmID" Type="int" Nullable="false" />
+    <Property Name="amrtikoht_ametID" Type="int" Nullable="false" />
+    <Property Name="tootaja_tootajaID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lapsSet">
+    <Key>
+      <PropertyRef Name="lapsID" />
+    </Key>
+    <Property Name="lapsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="eesnimi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="perenimi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="sunniag" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="jarjekordaSet">
+    <Key>
+      <PropertyRef Name="jarjekordaID" />
+    </Key>
+    <Property Name="jarjekordaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kuupaev" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="laps_lapsID" Type="int" Nullable="false" />
+    <Property Name="ruhm_ruhmID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="laps_ruhmSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="algus" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lopp" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="laps_lapsID" Type="int" Nullable="false" />
+    <Property Name="ruhm_ruhmID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="puudumineSet">
+    <Key>
+      <PropertyRef Name="puudumineID" />
+    </Key>
+    <Property Name="puudumineID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="algus" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lopp" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="pohjus" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="laps_lapsID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="roogSet">
+    <Key>
+      <PropertyRef Name="roogID" />
+    </Key>
+    <Property Name="roogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nimetus" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="menuuSet">
+    <Key>
+      <PropertyRef Name="menuuID" />
+    </Key>
+    <Property Name="menuuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kuupaev" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="toidukord" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="roog_roogID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="toidu_jagamineSet">
+    <Key>
+      <PropertyRef Name="jagamineID" />
+    </Key>
+    <Property Name="jagamineID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="portseoinid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="menuu_menuuID" Type="int" Nullable="false" />
+    <Property Name="ruhm_ruhmID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="menuutoidu_jagamine">
+    <End Role="menuu" Type="Model1.Store.menuuSet" Multiplicity="1" />
+    <End Role="toidu_jagamine" Type="Model1.Store.toidu_jagamineSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="menuu">
+        <PropertyRef Name="menuuID" />
+      </Principal>
+      <Dependent Role="toidu_jagamine">
+        <PropertyRef Name="menuu_menuuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ruhmtootamine">
+    <End Role="ruhm" Type="Model1.Store.ruhmSet" Multiplicity="1" />
+    <End Role="tootamine" Type="Model1.Store.tootamineSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ruhm">
+        <PropertyRef Name="ruhmID" />
+      </Principal>
+      <Dependent Role="tootamine">
+        <PropertyRef Name="ruhm_ruhmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="amrtikohttootamine">
+    <End Role="amrtikoht" Type="Model1.Store.amrtikohtSet" Multiplicity="1" />
+    <End Role="tootamine" Type="Model1.Store.tootamineSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="amrtikoht">
+        <PropertyRef Name="ametID" />
+      </Principal>
+      <Dependent Role="tootamine">
+        <PropertyRef Name="amrtikoht_ametID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tootajatootamine">
+    <End Role="tootaja" Type="Model1.Store.tootajaSet" Multiplicity="1" />
+    <End Role="tootamine" Type="Model1.Store.tootamineSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tootaja">
+        <PropertyRef Name="tootajaID" />
+      </Principal>
+      <Dependent Role="tootamine">
+        <PropertyRef Name="tootaja_tootajaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="lapsjarjekorda">
+    <End Role="laps" Type="Model1.Store.lapsSet" Multiplicity="1" />
+    <End Role="jarjekorda" Type="Model1.Store.jarjekordaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="laps">
+        <PropertyRef Name="lapsID" />
+      </Principal>
+      <Dependent Role="jarjekorda">
+        <PropertyRef Name="laps_lapsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ruhmjarjekorda">
+    <End Role="ruhm" Type="Model1.Store.ruhmSet" Multiplicity="1" />
+    <End Role="jarjekorda" Type="Model1.Store.jarjekordaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ruhm">
+        <PropertyRef Name="ruhmID" />
+      </Principal>
+      <Dependent Role="jarjekorda">
+        <PropertyRef Name="ruhm_ruhmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="lapslaps_ruhm">
+    <End Role="laps" Type="Model1.Store.lapsSet" Multiplicity="1" />
+    <End Role="laps_ruhm" Type="Model1.Store.laps_ruhmSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="laps">
+        <PropertyRef Name="lapsID" />
+      </Principal>
+      <Dependent Role="laps_ruhm">
+        <PropertyRef Name="laps_lapsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ruhmlaps_ruhm">
+    <End Role="ruhm" Type="Model1.Store.ruhmSet" Multiplicity="1" />
+    <End Role="laps_ruhm" Type="Model1.Store.laps_ruhmSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ruhm">
+        <PropertyRef Name="ruhmID" />
+      </Principal>
+      <Dependent Role="laps_ruhm">
+        <PropertyRef Name="ruhm_ruhmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="lapspuudumine">
+    <End Role="laps" Type="Model1.Store.lapsSet" Multiplicity="1" />
+    <End Role="puudumine" Type="Model1.Store.puudumineSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="laps">
+        <PropertyRef Name="lapsID" />
+      </Principal>
+      <Dependent Role="puudumine">
+        <PropertyRef Name="laps_lapsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="roogmenuu">
+    <End Role="roog" Type="Model1.Store.roogSet" Multiplicity="1" />
+    <End Role="menuu" Type="Model1.Store.menuuSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roog">
+        <PropertyRef Name="roogID" />
+      </Principal>
+      <Dependent Role="menuu">
+        <PropertyRef Name="roog_roogID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ruhmtoidu_jagamine">
+    <End Role="ruhm" Type="Model1.Store.ruhmSet" Multiplicity="1" />
+    <End Role="toidu_jagamine" Type="Model1.Store.toidu_jagamineSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ruhm">
+        <PropertyRef Name="ruhmID" />
+      </Principal>
+      <Dependent Role="toidu_jagamine">
+        <PropertyRef Name="ruhm_ruhmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Lasteaiad" EntityType="Model1.Lasteaiad" />
+          <EntitySet Name="Ruhmatuubid" EntityType="Model1.Ruhmatuubid" />
+          <EntitySet Name="Ametikohad" EntityType="Model1.Ametikohad" />
+          <EntitySet Name="Ruhmad" EntityType="Model1.Ruhmad" />
+          <EntitySet Name="Soimeruhmad" EntityType="Model1.Soimeruhmad" />
+          <EntitySet Name="Lapsed" EntityType="Model1.Lapsed" />
+          <EntitySet Name="Lapse_Puudumised" EntityType="Model1.Lapse_Puudumised" />
+          <EntitySet Name="Lasteaia_Jarjekord" EntityType="Model1.Lasteaia_Jarjekord" />
+          <EntitySet Name="Ruhma_Koosseis" EntityType="Model1.Ruhma_Koosseis" />
+          <EntitySet Name="Kasvatajad" EntityType="Model1.Kasvatajad" />
+          <EntitySet Name="Kasvataja_Too_Ajalugu" EntityType="Model1.Kasvataja_Too_Ajalugu" />
+          <EntitySet Name="Lapse_Ruhma_Ajalugu" EntityType="Model1.Lapse_Ruhma_Ajalugu" />
+          <EntitySet Name="Kook" EntityType="Model1.Kook" />
+          <EntitySet Name="Koogi_Menuu" EntityType="Model1.Koogi_Menuu" />
+          <EntitySet Name="Toit" EntityType="Model1.Toit" />
+          <EntitySet Name="Toidu_Valjaandmine" EntityType="Model1.Toidu_Valjaandmine" />
+          <EntitySet Name="ruhmSet" EntityType="Model1.ruhm" />
+          <EntitySet Name="amrtikohtSet" EntityType="Model1.amrtikoht" />
+          <EntitySet Name="tootajaSet" EntityType="Model1.tootaja" />
+          <EntitySet Name="tootamineSet" EntityType="Model1.tootamine" />
+          <EntitySet Name="lapsSet" EntityType="Model1.laps" />
+          <EntitySet Name="jarjekordaSet" EntityType="Model1.jarjekorda" />
+          <EntitySet Name="laps_ruhmSet" EntityType="Model1.laps_ruhm" />
+          <EntitySet Name="puudumineSet" EntityType="Model1.puudumine" />
+          <EntitySet Name="roogSet" EntityType="Model1.roog" />
+          <EntitySet Name="menuuSet" EntityType="Model1.menuu" />
+          <EntitySet Name="toidu_jagamineSet" EntityType="Model1.toidu_jagamine" />
+          <AssociationSet Name="menuutoidu_jagamine" Association="Model1.menuutoidu_jagamine">
+            <End Role="menuu" EntitySet="menuuSet" />
+            <End Role="toidu_jagamine" EntitySet="toidu_jagamineSet" />
+          </AssociationSet>
+          <AssociationSet Name="ruhmtootamine" Association="Model1.ruhmtootamine">
+            <End Role="ruhm" EntitySet="ruhmSet" />
+            <End Role="tootamine" EntitySet="tootamineSet" />
+          </AssociationSet>
+          <AssociationSet Name="amrtikohttootamine" Association="Model1.amrtikohttootamine">
+            <End Role="amrtikoht" EntitySet="amrtikohtSet" />
+            <End Role="tootamine" EntitySet="tootamineSet" />
+          </AssociationSet>
+          <AssociationSet Name="tootajatootamine" Association="Model1.tootajatootamine">
+            <End Role="tootaja" EntitySet="tootajaSet" />
+            <End Role="tootamine" EntitySet="tootamineSet" />
+          </AssociationSet>
+          <AssociationSet Name="lapsjarjekorda" Association="Model1.lapsjarjekorda">
+            <End Role="laps" EntitySet="lapsSet" />
+            <End Role="jarjekorda" EntitySet="jarjekordaSet" />
+          </AssociationSet>
+          <AssociationSet Name="ruhmjarjekorda" Association="Model1.ruhmjarjekorda">
+            <End Role="ruhm" EntitySet="ruhmSet" />
+            <End Role="jarjekorda" EntitySet="jarjekordaSet" />
+          </AssociationSet>
+          <AssociationSet Name="lapslaps_ruhm" Association="Model1.lapslaps_ruhm">
+            <End Role="laps" EntitySet="lapsSet" />
+            <End Role="laps_ruhm" EntitySet="laps_ruhmSet" />
+          </AssociationSet>
+          <AssociationSet Name="ruhmlaps_ruhm" Association="Model1.ruhmlaps_ruhm">
+            <End Role="ruhm" EntitySet="ruhmSet" />
+            <End Role="laps_ruhm" EntitySet="laps_ruhmSet" />
+          </AssociationSet>
+          <AssociationSet Name="lapspuudumine" Association="Model1.lapspuudumine">
+            <End Role="laps" EntitySet="lapsSet" />
+            <End Role="puudumine" EntitySet="puudumineSet" />
+          </AssociationSet>
+          <AssociationSet Name="roogmenuu" Association="Model1.roogmenuu">
+            <End Role="roog" EntitySet="roogSet" />
+            <End Role="menuu" EntitySet="menuuSet" />
+          </AssociationSet>
+          <AssociationSet Name="ruhmtoidu_jagamine" Association="Model1.ruhmtoidu_jagamine">
+            <End Role="ruhm" EntitySet="ruhmSet" />
+            <End Role="toidu_jagamine" EntitySet="toidu_jagamineSet" />
+          </AssociationSet>
+        </EntityContainer>
+
+        <EntityType Name="Lasteaiad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nimi" Type="String" Nullable="false" MaxLength="200" />
+          <Property Name="Aadress" Type="String" Nullable="true" MaxLength="300" />
+        </EntityType>
+
+        <EntityType Name="Ruhmatuubid">
+          <Key>
+            <PropertyRef Name="tyma_id" />
+          </Key>
+          <Property Name="tyma_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nimi" Type="String" Nullable="false" MaxLength="100" />
+          <Property Name="Preschool" Type="String" Nullable="true" MaxLength="100" />
+        </EntityType>
+
+        <EntityType Name="Ametikohad">
+          <Key>
+            <PropertyRef Name="job_id" />
+          </Key>
+          <Property Name="job_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nimi" Type="String" Nullable="false" MaxLength="100" />
+          <Property Name="Is_Kook" Type="Boolean" Nullable="true" />
+        </EntityType>
+
+        <EntityType Name="Ruhmad">
+          <Key>
+            <PropertyRef Name="group_id" />
+          </Key>
+          <Property Name="group_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ruhmatuubi_FK" Type="Int32" Nullable="true" />
+          <Property Name="Nimi" Type="String" Nullable="false" MaxLength="100" />
+          <Property Name="Aadress" Type="String" Nullable="true" MaxLength="200" />
+        </EntityType>
+
+        <EntityType Name="Soimeruhmad">
+          <Key>
+            <PropertyRef Name="group_id" />
+          </Key>
+          <Property Name="group_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Soime_id" Type="String" Nullable="true" MaxLength="100" />
+          <Property Name="Nimi" Type="String" Nullable="true" MaxLength="100" />
+        </EntityType>
+
+        <EntityType Name="Lapsed">
+          <Key>
+            <PropertyRef Name="child_id" />
+          </Key>
+          <Property Name="child_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Eesnimi" Type="String" Nullable="false" MaxLength="100" />
+          <Property Name="Perenimi" Type="String" Nullable="false" MaxLength="100" />
+          <Property Name="Synnipaev" Type="DateTime" Nullable="true" />
+        </EntityType>
+
+        <EntityType Name="Lapse_Puudumised">
+          <Key>
+            <PropertyRef Name="absence_id" />
+          </Key>
+          <Property Name="absence_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lapse_FK" Type="Int32" Nullable="false" />
+          <Property Name="Kuupaev" Type="DateTime" Nullable="false" />
+          <Property Name="Pohjus" Type="String" Nullable="true" MaxLength="250" />
+        </EntityType>
+
+        <EntityType Name="Lasteaia_Jarjekord">
+          <Key>
+            <PropertyRef Name="queue_id" />
+          </Key>
+          <Property Name="queue_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lapse_FK" Type="Int32" Nullable="false" />
+          <Property Name="Ruhma_Vihje_FK" Type="Int32" Nullable="true" />
+          <Property Name="Taotluse_kuupaev" Type="DateTime" Nullable="true" />
+        </EntityType>
+
+        <EntityType Name="Ruhma_Koosseis">
+          <Key>
+            <PropertyRef Name="group_staff_id" />
+          </Key>
+          <Property Name="group_staff_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ruhma_FK" Type="Int32" Nullable="false" />
+          <Property Name="Kasvataja_FK" Type="Int32" Nullable="true" />
+          <Property Name="Ametikoha_FK" Type="Int32" Nullable="true" />
+        </EntityType>
+
+        <EntityType Name="Kasvatajad">
+          <Key>
+            <PropertyRef Name="educator_id" />
+          </Key>
+          <Property Name="educator_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Eesnimi" Type="String" Nullable="false" MaxLength="100" />
+          <Property Name="Perenimi" Type="String" Nullable="false" MaxLength="100" />
+        </EntityType>
+
+        <EntityType Name="Kasvataja_Too_Ajalugu">
+          <Key>
+            <PropertyRef Name="history_id" />
+          </Key>
+          <Property Name="history_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kasvataja_FK" Type="Int32" Nullable="false" />
+          <Property Name="Ruhma_FK" Type="Int32" Nullable="true" />
+          <Property Name="Ametikoha_FK" Type="Int32" Nullable="true" />
+        </EntityType>
+
+        <EntityType Name="Lapse_Ruhma_Ajalugu">
+          <Key>
+            <PropertyRef Name="child_group_id" />
+          </Key>
+          <Property Name="child_group_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lapse_FK" Type="Int32" Nullable="false" />
+          <Property Name="Ruhma_FK" Type="Int32" Nullable="false" />
+          <Property Name="Start_Date" Type="DateTime" Nullable="false" />
+          <Property Name="End_Date" Type="DateTime" Nullable="true" />
+        </EntityType>
+
+        <EntityType Name="Kook">
+          <Key>
+            <PropertyRef Name="kitchen_id" />
+          </Key>
+          <Property Name="kitchen_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nimi" Type="String" Nullable="false" MaxLength="150" />
+        </EntityType>
+
+        <EntityType Name="Koogi_Menuu">
+          <Key>
+            <PropertyRef Name="menu_id" />
+          </Key>
+          <Property Name="menu_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Koogi_FK" Type="Int32" Nullable="false" />
+          <Property Name="Kuupaev" Type="DateTime" Nullable="false" />
+        </EntityType>
+
+        <EntityType Name="Toit">
+          <Key>
+            <PropertyRef Name="dish_id" />
+          </Key>
+          <Property Name="dish_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nimi" Type="String" Nullable="false" MaxLength="200" />
+        </EntityType>
+
+        <EntityType Name="Toidu_Valjaandmine">
+          <Key>
+            <PropertyRef Name="food_serving_id" />
+          </Key>
+          <Property Name="food_serving_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Toidu_FK" Type="Int32" Nullable="false" />
+          <Property Name="Ruhma_FK" Type="Int32" Nullable="true" />
+          <Property Name="Portsjonid" Type="Int32" Nullable="true" />
+          <Property Name="Kuupaev" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ruhm">
+          <Key>
+            <PropertyRef Name="ruhmID" />
+          </Key>
+          <Property Name="ruhmID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nimi" Type="String" Nullable="false" />
+          <Property Name="tuup" Type="String" Nullable="false" />
+          <NavigationProperty Name="tootamine" Relationship="Model1.ruhmtootamine" FromRole="ruhm" ToRole="tootamine" />
+          <NavigationProperty Name="jarjekorda" Relationship="Model1.ruhmjarjekorda" FromRole="ruhm" ToRole="jarjekorda" />
+          <NavigationProperty Name="laps_ruhm" Relationship="Model1.ruhmlaps_ruhm" FromRole="ruhm" ToRole="laps_ruhm" />
+          <NavigationProperty Name="toidu_jagamine" Relationship="Model1.ruhmtoidu_jagamine" FromRole="ruhm" ToRole="toidu_jagamine" />
+        </EntityType>
+        <EntityType Name="amrtikoht">
+          <Key>
+            <PropertyRef Name="ametID" />
+          </Key>
+          <Property Name="ametID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nimetus" Type="String" Nullable="false" />
+          <NavigationProperty Name="tootamine" Relationship="Model1.amrtikohttootamine" FromRole="amrtikoht" ToRole="tootamine" />
+        </EntityType>
+        <EntityType Name="tootaja">
+          <Key>
+            <PropertyRef Name="tootajaID" />
+          </Key>
+          <Property Name="tootajaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="eesnimi" Type="String" Nullable="false" />
+          <Property Name="perenimi" Type="String" Nullable="false" />
+          <NavigationProperty Name="tootamine" Relationship="Model1.tootajatootamine" FromRole="tootaja" ToRole="tootamine" />
+        </EntityType>
+        <EntityType Name="tootamine">
+          <Key>
+            <PropertyRef Name="tootamineID" />
+          </Key>
+          <Property Name="tootamineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="algus" Type="String" Nullable="false" />
+          <Property Name="lopp" Type="String" Nullable="false" />
+          <NavigationProperty Name="ruhm" Relationship="Model1.ruhmtootamine" FromRole="tootamine" ToRole="ruhm" />
+          <NavigationProperty Name="amrtikoht" Relationship="Model1.amrtikohttootamine" FromRole="tootamine" ToRole="amrtikoht" />
+          <NavigationProperty Name="tootaja" Relationship="Model1.tootajatootamine" FromRole="tootamine" ToRole="tootaja" />
+        </EntityType>
+        <EntityType Name="laps">
+          <Key>
+            <PropertyRef Name="lapsID" />
+          </Key>
+          <Property Name="lapsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="eesnimi" Type="String" Nullable="false" />
+          <Property Name="perenimi" Type="String" Nullable="false" />
+          <Property Name="sunniag" Type="String" Nullable="false" />
+          <NavigationProperty Name="jarjekorda" Relationship="Model1.lapsjarjekorda" FromRole="laps" ToRole="jarjekorda" />
+          <NavigationProperty Name="laps_ruhm" Relationship="Model1.lapslaps_ruhm" FromRole="laps" ToRole="laps_ruhm" />
+          <NavigationProperty Name="puudumine" Relationship="Model1.lapspuudumine" FromRole="laps" ToRole="puudumine" />
+        </EntityType>
+        <EntityType Name="jarjekorda">
+          <Key>
+            <PropertyRef Name="jarjekordaID" />
+          </Key>
+          <Property Name="jarjekordaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kuupaev" Type="String" Nullable="false" />
+          <NavigationProperty Name="laps" Relationship="Model1.lapsjarjekorda" FromRole="jarjekorda" ToRole="laps" />
+          <NavigationProperty Name="ruhm" Relationship="Model1.ruhmjarjekorda" FromRole="jarjekorda" ToRole="ruhm" />
+        </EntityType>
+        <EntityType Name="laps_ruhm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="algus" Type="String" Nullable="false" />
+          <Property Name="lopp" Type="String" Nullable="false" />
+          <NavigationProperty Name="laps" Relationship="Model1.lapslaps_ruhm" FromRole="laps_ruhm" ToRole="laps" />
+          <NavigationProperty Name="ruhm" Relationship="Model1.ruhmlaps_ruhm" FromRole="laps_ruhm" ToRole="ruhm" />
+        </EntityType>
+        <EntityType Name="puudumine">
+          <Key>
+            <PropertyRef Name="puudumineID" />
+          </Key>
+          <Property Name="puudumineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="algus" Type="String" Nullable="false" />
+          <Property Name="lopp" Type="String" Nullable="false" />
+          <Property Name="pohjus" Type="String" Nullable="false" />
+          <NavigationProperty Name="laps" Relationship="Model1.lapspuudumine" FromRole="puudumine" ToRole="laps" />
+        </EntityType>
+        <EntityType Name="roog">
+          <Key>
+            <PropertyRef Name="roogID" />
+          </Key>
+          <Property Name="roogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nimetus" Type="String" Nullable="false" />
+          <NavigationProperty Name="menuu" Relationship="Model1.roogmenuu" FromRole="roog" ToRole="menuu" />
+        </EntityType>
+        <EntityType Name="menuu">
+          <Key>
+            <PropertyRef Name="menuuID" />
+          </Key>
+          <Property Name="menuuID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kuupaev" Type="String" Nullable="false" />
+          <Property Name="toidukord" Type="String" Nullable="false" />
+          <NavigationProperty Name="toidu_jagamine" Relationship="Model1.menuutoidu_jagamine" FromRole="menuu" ToRole="toidu_jagamine" />
+          <NavigationProperty Name="roog" Relationship="Model1.roogmenuu" FromRole="menuu" ToRole="roog" />
+        </EntityType>
+        <EntityType Name="toidu_jagamine">
+          <Key>
+            <PropertyRef Name="jagamineID" />
+          </Key>
+          <Property Name="jagamineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="portseoinid" Type="String" Nullable="false" />
+          <NavigationProperty Name="menuu" Relationship="Model1.menuutoidu_jagamine" FromRole="toidu_jagamine" ToRole="menuu" />
+          <NavigationProperty Name="ruhm" Relationship="Model1.ruhmtoidu_jagamine" FromRole="toidu_jagamine" ToRole="ruhm" />
+        </EntityType>
+        <Association Name="menuutoidu_jagamine">
+          <End Type="Model1.menuu" Role="menuu" Multiplicity="1" />
+          <End Type="Model1.toidu_jagamine" Role="toidu_jagamine" Multiplicity="*" />
+        </Association>
+        <Association Name="ruhmtootamine">
+          <End Type="Model1.ruhm" Role="ruhm" Multiplicity="1" />
+          <End Type="Model1.tootamine" Role="tootamine" Multiplicity="*" />
+        </Association>
+        <Association Name="amrtikohttootamine">
+          <End Type="Model1.amrtikoht" Role="amrtikoht" Multiplicity="1" />
+          <End Type="Model1.tootamine" Role="tootamine" Multiplicity="*" />
+        </Association>
+        <Association Name="tootajatootamine">
+          <End Type="Model1.tootaja" Role="tootaja" Multiplicity="1" />
+          <End Type="Model1.tootamine" Role="tootamine" Multiplicity="*" />
+        </Association>
+        <Association Name="lapsjarjekorda">
+          <End Type="Model1.laps" Role="laps" Multiplicity="1" />
+          <End Type="Model1.jarjekorda" Role="jarjekorda" Multiplicity="*" />
+        </Association>
+        <Association Name="ruhmjarjekorda">
+          <End Type="Model1.ruhm" Role="ruhm" Multiplicity="1" />
+          <End Type="Model1.jarjekorda" Role="jarjekorda" Multiplicity="*" />
+        </Association>
+        <Association Name="lapslaps_ruhm">
+          <End Type="Model1.laps" Role="laps" Multiplicity="1" />
+          <End Type="Model1.laps_ruhm" Role="laps_ruhm" Multiplicity="*" />
+        </Association>
+        <Association Name="ruhmlaps_ruhm">
+          <End Type="Model1.ruhm" Role="ruhm" Multiplicity="1" />
+          <End Type="Model1.laps_ruhm" Role="laps_ruhm" Multiplicity="*" />
+        </Association>
+        <Association Name="lapspuudumine">
+          <End Type="Model1.laps" Role="laps" Multiplicity="1" />
+          <End Type="Model1.puudumine" Role="puudumine" Multiplicity="*" />
+        </Association>
+        <Association Name="roogmenuu">
+          <End Type="Model1.roog" Role="roog" Multiplicity="1" />
+          <End Type="Model1.menuu" Role="menuu" Multiplicity="*" />
+        </Association>
+        <Association Name="ruhmtoidu_jagamine">
+          <End Type="Model1.ruhm" Role="ruhm" Multiplicity="1" />
+          <End Type="Model1.toidu_jagamine" Role="toidu_jagamine" Multiplicity="*" />
+        </Association>
+
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="Lasteaiad">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Lasteaiad)">
+        <MappingFragment StoreEntitySet="Lasteaiad">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Nimi" ColumnName="Nimi" />
+          <ScalarProperty Name="Aadress" ColumnName="Aadress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ruhmatuubid">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Ruhmatuubid)">
+        <MappingFragment StoreEntitySet="Ruhmatuubid">
+          <ScalarProperty Name="tyma_id" ColumnName="tyma_id" />
+          <ScalarProperty Name="Nimi" ColumnName="Nimi" />
+          <ScalarProperty Name="Preschool" ColumnName="Preschool" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ametikohad">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Ametikohad)">
+        <MappingFragment StoreEntitySet="Ametikohad">
+          <ScalarProperty Name="job_id" ColumnName="job_id" />
+          <ScalarProperty Name="Nimi" ColumnName="Nimi" />
+          <ScalarProperty Name="Is_Kook" ColumnName="Is_Kook" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ruhmad">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Ruhmad)">
+        <MappingFragment StoreEntitySet="Ruhmad">
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="Ruhmatuubi_FK" ColumnName="Ruhmatuubi_FK" />
+          <ScalarProperty Name="Nimi" ColumnName="Nimi" />
+          <ScalarProperty Name="Aadress" ColumnName="Aadress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Soimeruhmad">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Soimeruhmad)">
+        <MappingFragment StoreEntitySet="Soimeruhmad">
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="Soime_id" ColumnName="Soime_id" />
+          <ScalarProperty Name="Nimi" ColumnName="Nimi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lapsed">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Lapsed)">
+        <MappingFragment StoreEntitySet="Lapsed">
+          <ScalarProperty Name="child_id" ColumnName="child_id" />
+          <ScalarProperty Name="Eesnimi" ColumnName="Eesnimi" />
+          <ScalarProperty Name="Perenimi" ColumnName="Perenimi" />
+          <ScalarProperty Name="Synnipaev" ColumnName="Synnipaev" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lapse_Puudumised">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Lapse_Puudumised)">
+        <MappingFragment StoreEntitySet="Lapse_Puudumised">
+          <ScalarProperty Name="absence_id" ColumnName="absence_id" />
+          <ScalarProperty Name="Lapse_FK" ColumnName="Lapse_FK" />
+          <ScalarProperty Name="Kuupaev" ColumnName="Kuupaev" />
+          <ScalarProperty Name="Pohjus" ColumnName="Pohjus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lasteaia_Jarjekord">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Lasteaia_Jarjekord)">
+        <MappingFragment StoreEntitySet="Lasteaia_Jarjekord">
+          <ScalarProperty Name="queue_id" ColumnName="queue_id" />
+          <ScalarProperty Name="Lapse_FK" ColumnName="Lapse_FK" />
+          <ScalarProperty Name="Ruhma_Vihje_FK" ColumnName="Ruhma_Vihje_FK" />
+          <ScalarProperty Name="Taotluse_kuupaev" ColumnName="Taotluse_kuupaev" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ruhma_Koosseis">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Ruhma_Koosseis)">
+        <MappingFragment StoreEntitySet="Ruhma_Koosseis">
+          <ScalarProperty Name="group_staff_id" ColumnName="group_staff_id" />
+          <ScalarProperty Name="Ruhma_FK" ColumnName="Ruhma_FK" />
+          <ScalarProperty Name="Kasvataja_FK" ColumnName="Kasvataja_FK" />
+          <ScalarProperty Name="Ametikoha_FK" ColumnName="Ametikoha_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kasvatajad">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Kasvatajad)">
+        <MappingFragment StoreEntitySet="Kasvatajad">
+          <ScalarProperty Name="educator_id" ColumnName="educator_id" />
+          <ScalarProperty Name="Eesnimi" ColumnName="Eesnimi" />
+          <ScalarProperty Name="Perenimi" ColumnName="Perenimi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kasvataja_Too_Ajalugu">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Kasvataja_Too_Ajalugu)">
+        <MappingFragment StoreEntitySet="Kasvataja_Too_Ajalugu">
+          <ScalarProperty Name="history_id" ColumnName="history_id" />
+          <ScalarProperty Name="Kasvataja_FK" ColumnName="Kasvataja_FK" />
+          <ScalarProperty Name="Ruhma_FK" ColumnName="Ruhma_FK" />
+          <ScalarProperty Name="Ametikoha_FK" ColumnName="Ametikoha_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lapse_Ruhma_Ajalugu">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Lapse_Ruhma_Ajalugu)">
+        <MappingFragment StoreEntitySet="Lapse_Ruhma_Ajalugu">
+          <ScalarProperty Name="child_group_id" ColumnName="child_group_id" />
+          <ScalarProperty Name="Lapse_FK" ColumnName="Lapse_FK" />
+          <ScalarProperty Name="Ruhma_FK" ColumnName="Ruhma_FK" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kook">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Kook)">
+        <MappingFragment StoreEntitySet="Kook">
+          <ScalarProperty Name="kitchen_id" ColumnName="kitchen_id" />
+          <ScalarProperty Name="Nimi" ColumnName="Nimi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Koogi_Menuu">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Koogi_Menuu)">
+        <MappingFragment StoreEntitySet="Koogi_Menuu">
+          <ScalarProperty Name="menu_id" ColumnName="menu_id" />
+          <ScalarProperty Name="Koogi_FK" ColumnName="Koogi_FK" />
+          <ScalarProperty Name="Kuupaev" ColumnName="Kuupaev" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Toit">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Toit)">
+        <MappingFragment StoreEntitySet="Toit">
+          <ScalarProperty Name="dish_id" ColumnName="dish_id" />
+          <ScalarProperty Name="Nimi" ColumnName="Nimi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Toidu_Valjaandmine">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Toidu_Valjaandmine)">
+        <MappingFragment StoreEntitySet="Toidu_Valjaandmine">
+          <ScalarProperty Name="food_serving_id" ColumnName="food_serving_id" />
+          <ScalarProperty Name="Toidu_FK" ColumnName="Toidu_FK" />
+          <ScalarProperty Name="Ruhma_FK" ColumnName="Ruhma_FK" />
+          <ScalarProperty Name="Portsjonid" ColumnName="Portsjonid" />
+          <ScalarProperty Name="Kuupaev" ColumnName="Kuupaev" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ruhmSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ruhm)">
+        <MappingFragment StoreEntitySet="ruhmSet">
+          <ScalarProperty Name="ruhmID" ColumnName="ruhmID" />
+          <ScalarProperty Name="nimi" ColumnName="nimi" />
+          <ScalarProperty Name="tuup" ColumnName="tuup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="amrtikohtSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.amrtikoht)">
+        <MappingFragment StoreEntitySet="amrtikohtSet">
+          <ScalarProperty Name="ametID" ColumnName="ametID" />
+          <ScalarProperty Name="nimetus" ColumnName="nimetus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tootajaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.tootaja)">
+        <MappingFragment StoreEntitySet="tootajaSet">
+          <ScalarProperty Name="tootajaID" ColumnName="tootajaID" />
+          <ScalarProperty Name="eesnimi" ColumnName="eesnimi" />
+          <ScalarProperty Name="perenimi" ColumnName="perenimi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tootamineSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.tootamine)">
+        <MappingFragment StoreEntitySet="tootamineSet">
+          <ScalarProperty Name="tootamineID" ColumnName="tootamineID" />
+          <ScalarProperty Name="algus" ColumnName="algus" />
+          <ScalarProperty Name="lopp" ColumnName="lopp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lapsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.laps)">
+        <MappingFragment StoreEntitySet="lapsSet">
+          <ScalarProperty Name="lapsID" ColumnName="lapsID" />
+          <ScalarProperty Name="eesnimi" ColumnName="eesnimi" />
+          <ScalarProperty Name="perenimi" ColumnName="perenimi" />
+          <ScalarProperty Name="sunniag" ColumnName="sunniag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jarjekordaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.jarjekorda)">
+        <MappingFragment StoreEntitySet="jarjekordaSet">
+          <ScalarProperty Name="jarjekordaID" ColumnName="jarjekordaID" />
+          <ScalarProperty Name="kuupaev" ColumnName="kuupaev" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="laps_ruhmSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.laps_ruhm)">
+        <MappingFragment StoreEntitySet="laps_ruhmSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="algus" ColumnName="algus" />
+          <ScalarProperty Name="lopp" ColumnName="lopp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="puudumineSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.puudumine)">
+        <MappingFragment StoreEntitySet="puudumineSet">
+          <ScalarProperty Name="puudumineID" ColumnName="puudumineID" />
+          <ScalarProperty Name="algus" ColumnName="algus" />
+          <ScalarProperty Name="lopp" ColumnName="lopp" />
+          <ScalarProperty Name="pohjus" ColumnName="pohjus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roogSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.roog)">
+        <MappingFragment StoreEntitySet="roogSet">
+          <ScalarProperty Name="roogID" ColumnName="roogID" />
+          <ScalarProperty Name="nimetus" ColumnName="nimetus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="menuuSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.menuu)">
+        <MappingFragment StoreEntitySet="menuuSet">
+          <ScalarProperty Name="menuuID" ColumnName="menuuID" />
+          <ScalarProperty Name="kuupaev" ColumnName="kuupaev" />
+          <ScalarProperty Name="toidukord" ColumnName="toidukord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="toidu_jagamineSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.toidu_jagamine)">
+        <MappingFragment StoreEntitySet="toidu_jagamineSet">
+          <ScalarProperty Name="jagamineID" ColumnName="jagamineID" />
+          <ScalarProperty Name="portseoinid" ColumnName="portseoinid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="menuutoidu_jagamine" TypeName="Model1.menuutoidu_jagamine" StoreEntitySet="toidu_jagamineSet">
+      <EndProperty Name="menuu">
+        <ScalarProperty Name="menuuID" ColumnName="menuu_menuuID" />
+      </EndProperty>
+      <EndProperty Name="toidu_jagamine">
+        <ScalarProperty Name="jagamineID" ColumnName="jagamineID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ruhmtootamine" TypeName="Model1.ruhmtootamine" StoreEntitySet="tootamineSet">
+      <EndProperty Name="ruhm">
+        <ScalarProperty Name="ruhmID" ColumnName="ruhm_ruhmID" />
+      </EndProperty>
+      <EndProperty Name="tootamine">
+        <ScalarProperty Name="tootamineID" ColumnName="tootamineID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="amrtikohttootamine" TypeName="Model1.amrtikohttootamine" StoreEntitySet="tootamineSet">
+      <EndProperty Name="amrtikoht">
+        <ScalarProperty Name="ametID" ColumnName="amrtikoht_ametID" />
+      </EndProperty>
+      <EndProperty Name="tootamine">
+        <ScalarProperty Name="tootamineID" ColumnName="tootamineID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tootajatootamine" TypeName="Model1.tootajatootamine" StoreEntitySet="tootamineSet">
+      <EndProperty Name="tootaja">
+        <ScalarProperty Name="tootajaID" ColumnName="tootaja_tootajaID" />
+      </EndProperty>
+      <EndProperty Name="tootamine">
+        <ScalarProperty Name="tootamineID" ColumnName="tootamineID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="lapsjarjekorda" TypeName="Model1.lapsjarjekorda" StoreEntitySet="jarjekordaSet">
+      <EndProperty Name="laps">
+        <ScalarProperty Name="lapsID" ColumnName="laps_lapsID" />
+      </EndProperty>
+      <EndProperty Name="jarjekorda">
+        <ScalarProperty Name="jarjekordaID" ColumnName="jarjekordaID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ruhmjarjekorda" TypeName="Model1.ruhmjarjekorda" StoreEntitySet="jarjekordaSet">
+      <EndProperty Name="ruhm">
+        <ScalarProperty Name="ruhmID" ColumnName="ruhm_ruhmID" />
+      </EndProperty>
+      <EndProperty Name="jarjekorda">
+        <ScalarProperty Name="jarjekordaID" ColumnName="jarjekordaID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="lapslaps_ruhm" TypeName="Model1.lapslaps_ruhm" StoreEntitySet="laps_ruhmSet">
+      <EndProperty Name="laps">
+        <ScalarProperty Name="lapsID" ColumnName="laps_lapsID" />
+      </EndProperty>
+      <EndProperty Name="laps_ruhm">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ruhmlaps_ruhm" TypeName="Model1.ruhmlaps_ruhm" StoreEntitySet="laps_ruhmSet">
+      <EndProperty Name="ruhm">
+        <ScalarProperty Name="ruhmID" ColumnName="ruhm_ruhmID" />
+      </EndProperty>
+      <EndProperty Name="laps_ruhm">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="lapspuudumine" TypeName="Model1.lapspuudumine" StoreEntitySet="puudumineSet">
+      <EndProperty Name="laps">
+        <ScalarProperty Name="lapsID" ColumnName="laps_lapsID" />
+      </EndProperty>
+      <EndProperty Name="puudumine">
+        <ScalarProperty Name="puudumineID" ColumnName="puudumineID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="roogmenuu" TypeName="Model1.roogmenuu" StoreEntitySet="menuuSet">
+      <EndProperty Name="roog">
+        <ScalarProperty Name="roogID" ColumnName="roog_roogID" />
+      </EndProperty>
+      <EndProperty Name="menuu">
+        <ScalarProperty Name="menuuID" ColumnName="menuuID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ruhmtoidu_jagamine" TypeName="Model1.ruhmtoidu_jagamine" StoreEntitySet="toidu_jagamineSet">
+      <EndProperty Name="ruhm">
+        <ScalarProperty Name="ruhmID" ColumnName="ruhm_ruhmID" />
+      </EndProperty>
+      <EndProperty Name="toidu_jagamine">
+        <ScalarProperty Name="jagamineID" ColumnName="jagamineID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
