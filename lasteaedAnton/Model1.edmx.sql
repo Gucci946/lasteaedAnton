@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 10/08/2026 13:06:22
+-- Date Created: 10/13/2026 09:28:46
 -- Generated from EDMX file: C:\Users\opilane\source\repos\lasteaedAnton\lasteaedAnton\Model1.edmx
 -- --------------------------------------------------
 
@@ -17,6 +17,39 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_menuutoidu_jagamine]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[toidu_jagamineSet] DROP CONSTRAINT [FK_menuutoidu_jagamine];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ruhmtootamine]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[tootamineSet] DROP CONSTRAINT [FK_ruhmtootamine];
+GO
+IF OBJECT_ID(N'[dbo].[FK_amrtikohttootamine]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[tootamineSet] DROP CONSTRAINT [FK_amrtikohttootamine];
+GO
+IF OBJECT_ID(N'[dbo].[FK_tootajatootamine]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[tootamineSet] DROP CONSTRAINT [FK_tootajatootamine];
+GO
+IF OBJECT_ID(N'[dbo].[FK_lapsjarjekorda]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[jarjekordaSet] DROP CONSTRAINT [FK_lapsjarjekorda];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ruhmjarjekorda]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[jarjekordaSet] DROP CONSTRAINT [FK_ruhmjarjekorda];
+GO
+IF OBJECT_ID(N'[dbo].[FK_lapslaps_ruhm]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[laps_ruhmSet] DROP CONSTRAINT [FK_lapslaps_ruhm];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ruhmlaps_ruhm]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[laps_ruhmSet] DROP CONSTRAINT [FK_ruhmlaps_ruhm];
+GO
+IF OBJECT_ID(N'[dbo].[FK_lapspuudumine]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[puudumineSet] DROP CONSTRAINT [FK_lapspuudumine];
+GO
+IF OBJECT_ID(N'[dbo].[FK_roogmenuu]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[menuuSet] DROP CONSTRAINT [FK_roogmenuu];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ruhmtoidu_jagamine]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[toidu_jagamineSet] DROP CONSTRAINT [FK_ruhmtoidu_jagamine];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -69,6 +102,39 @@ IF OBJECT_ID(N'[dbo].[Toit]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Toidu_Valjaandmine]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Toidu_Valjaandmine];
+GO
+IF OBJECT_ID(N'[dbo].[ruhmSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ruhmSet];
+GO
+IF OBJECT_ID(N'[dbo].[amrtikohtSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[amrtikohtSet];
+GO
+IF OBJECT_ID(N'[dbo].[tootajaSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[tootajaSet];
+GO
+IF OBJECT_ID(N'[dbo].[tootamineSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[tootamineSet];
+GO
+IF OBJECT_ID(N'[dbo].[lapsSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[lapsSet];
+GO
+IF OBJECT_ID(N'[dbo].[jarjekordaSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[jarjekordaSet];
+GO
+IF OBJECT_ID(N'[dbo].[laps_ruhmSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[laps_ruhmSet];
+GO
+IF OBJECT_ID(N'[dbo].[puudumineSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[puudumineSet];
+GO
+IF OBJECT_ID(N'[dbo].[roogSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[roogSet];
+GO
+IF OBJECT_ID(N'[dbo].[menuuSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[menuuSet];
+GO
+IF OBJECT_ID(N'[dbo].[toidu_jagamineSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[toidu_jagamineSet];
 GO
 
 -- --------------------------------------------------

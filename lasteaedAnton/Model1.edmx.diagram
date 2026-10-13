@@ -4,15 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a10e01b694d64b31af944b0d2b99d14b" Name="Diagram1" >
+      <Diagram DiagramId="a10e01b694d64b31af944b0d2b99d14b" Name="Diagram1" ZoomLevel="74" >
         <EntityTypeShape EntityType="Model1.ruhm" Width="1.5" PointX="7.25" PointY="2.375" />
         <EntityTypeShape EntityType="Model1.ametikoht" Width="1.5" PointX="10.5" PointY="2.875" />
         <EntityTypeShape EntityType="Model1.tootaja" Width="1.5" PointX="5" PointY="4.625" />
         <EntityTypeShape EntityType="Model1.tootamine" Width="1.5" PointX="9.25" PointY="6.5" />
-        <EntityTypeShape EntityType="Model1.ruhm" Width="1.5" PointX="2" PointY="0.5" />
         <EntityTypeShape EntityType="Model1.amrtikoht" Width="1.5" PointX="7.625" PointY="0.5" />
-        <EntityTypeShape EntityType="Model1.tootaja" Width="1.5" PointX="12.125" PointY="0.5" />
-        <EntityTypeShape EntityType="Model1.tootamine" Width="1.5" PointX="2" PointY="3" />
         <EntityTypeShape EntityType="Model1.laps" Width="1.5" PointX="7.625" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="Model1.jarjekorda" Width="1.5" PointX="12.25" PointY="3" />
         <EntityTypeShape EntityType="Model1.laps_ruhm" Width="1.5" PointX="2" PointY="5.875" />
